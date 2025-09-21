@@ -348,3 +348,10 @@ console.log(person.hobbies[1]);
 console.log(console); // object
 person.firstName = "doe";
 console.log(person);
+
+// template string
+const FirstName = "hadil";
+const website = "hadil.com";
+console.log("my name is " + FirstName + " and my website is " + website);
+// template string
+console.log(`my name is ${FirstName} and my website is ${website}`);
