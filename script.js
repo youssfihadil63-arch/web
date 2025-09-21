@@ -318,3 +318,33 @@ fruits.pop();
 console.log(fruits);
 fruits.unshift("mango");
 console.log(fruits);
+
+// variables
+const firstName = "john";
+const id = 12345;
+const adress = " Cairo Egypt"
+const hobbies = ["football", "swimming", "reading"];
+console.log(typeof hobbies);
+// objects in javascript 
+// { key : value }
+// let | const
+const person = {
+    firstName: "john",
+    id: 12345,
+    address: {
+        city: "Cairo",
+        country: "Egypt"
+    },
+    hobbies: ["football", "swimming", "reading"],
+    sayhi: function () {
+        console.log("hello");
+    }
+};
+person.sayhi();
+console.log(person.address.city);
+console.log(person);
+console.log(person.firstName);
+console.log(person.hobbies[1]);
+console.log(console); // object
+person.firstName = "doe";
+console.log(person);
