@@ -355,3 +355,71 @@ const website = "hadil.com";
 console.log("my name is " + FirstName + " and my website is " + website);
 // template string
 console.log(`my name is ${FirstName} and my website is ${website}`);
+// document object model (DOM)
+// window object 
+// alert("hello") // bech y3ml popup f page web site    
+const element = document.createElement("h3"); // document.createElement bech y5li element jdida f page web site create des tages yefathal dima neste3ml itari9a hathi
+element.innerText = "2024"; // bech y7otli text f element h3
+element.innerHTML = "<span> 2024 </span>"; // bech y7otli html f element h3 ama moch behi neste3melha 3la sécurite
+document.body.appendClild(element); // bech y7otli element f body  affiche dans la page de web site
+console.log(window); // howa metasaf7
+console.log(document); // html " l'affichage de cette page"
+console.log(window.innerHeight); // hauteur de la page web site
+console.log(window.innerWidth); // largeur de la page web site
+
+
+
+//div[id/id/class]
+console.log(document.getElementById("name")); // bech yjibli element li 3ando id name // return html element
+console.log(document.getElementById("job"));
+console.log(document.getElementsByClassName("add")); // null
+console.log(document.getElementsByClassName("title")); // bech yjibli element li 3ando class title // return HTML collection
+
+const MyName = document.getElementById("name");
+MyName.style.color = "green"; // bech ybdelli couleur mta3 text mta3 h1 li 3ando id name
+MyName.style.backgroundColor = "black"; // bech ybdelli couleur mta3 background mta3 h1 li 3ando id name
+MyName.style.padding = "20px";
+const MyJob = document.getElementById("job");
+MyJob.style.color = "red";
+MyJob.style.backgroundColor = "yellow";
+MyJob.style.padding = "10px";
+const titles = document.getElementsByClassName("title");
+title[0].style.color = "blue";
+titles.forEach(element, index)=> {
+    element.style.backgroundColor = "grey"
+}; // forEach meyest3mlouch 3la HTML collection
+Array.from(titles).forEach((element) => {
+    element.style.color = "blue"
+}); // haka bech n7awel HTML collection l array w n3ml forEach 3liha
+
+// querySelector, querySelectorAll (hathom i3awthow document.getElementById w document.getElementsByClassName) iraj3oli NodeList
+console.log(document.querySelector("#name"));
+console.log(document.querySelector(".title")); // bech yjibli awel element li 3ando class title
+console.log(document.querySelectorAll(".title"));
+
+const Name = document.querySelector("#name");
+console.log(Name.dataset);
+Name.dataset.count = 10; // bech n7ot data attribute jdid li h1 li 3ando id name
+const btn = document.querySelector("#clickhere");
+console.log(btn.dataset);
+
+btn.addEventListener("click", () => {
+    const clicks = Number(btn.dataset.clicks); // number = parseInt
+    btn.dataset.clicks = clicks + 1;
+    console.log(`clicked here ${clicks} `);
+});
+// click 
+// mouseleave
+// mouseenter
+btn.addEventListener("mouseenter", () => {
+    const clicks = Number(btn.dataset.clicks); // number = parseInt
+    btn.dataset.clicks = clicks + 1;
+    console.log(`mouse enter here ${clicks} `);
+});
+btn.addEventListener("mouseleave", () => {
+    const clicks = Number(btn.dataset.clicks); // number = parseInt
+    btn.dataset.clicks = clicks + 1;
+    console.log(`clicked here ${clicks} `);
+});
+// inejmo y5demo il kol ama meratbin  ye3ni 7asb il tertib ili ana 7ateto fih
+
